@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-display: "Space Grotesk";
+    --font-body: "DM Sans";
+    --font-mono: monospace;
+    --radius: 0.5rem;
+
+    --background: 0.98 0.008 230;
+    --foreground: 0.16 0.018 240;
+    --card: 1.0 0.004 230;
+    --card-foreground: 0.16 0.018 240;
+    --popover: 1.0 0.004 230;
+    --popover-foreground: 0.16 0.018 240;
+
+    --primary: 0.38 0.14 245;
+    --primary-foreground: 0.98 0.005 245;
+
+    --secondary: 0.94 0.012 230;
+    --secondary-foreground: 0.26 0.018 240;
+    --muted: 0.94 0.012 230;
+    --muted-foreground: 0.48 0.014 235;
+
+    --accent: 0.58 0.16 185;
+    --accent-foreground: 0.98 0.005 185;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0.005 25;
+
+    --border: 0.9 0.01 230;
+    --input: 0.9 0.01 230;
+    --ring: 0.38 0.14 245;
+
+    --chart-1: 0.38 0.14 245;
+    --chart-2: 0.58 0.16 185;
+    --chart-3: 0.72 0.15 75;
+    --chart-4: 0.55 0.18 310;
+    --chart-5: 0.65 0.14 155;
+
+    --sidebar: 0.96 0.01 230;
+    --sidebar-foreground: 0.16 0.018 240;
+    --sidebar-primary: 0.38 0.14 245;
+    --sidebar-primary-foreground: 0.98 0.005 245;
+    --sidebar-accent: 0.92 0.014 230;
+    --sidebar-accent-foreground: 0.26 0.018 240;
+    --sidebar-border: 0.88 0.012 230;
+    --sidebar-ring: 0.38 0.14 245;
+
+    --success: 0.58 0.16 150;
+    --success-foreground: 0.98 0.005 150;
+    --warning: 0.72 0.15 75;
+    --warning-foreground: 0.16 0.018 75;
+  }
+
+  .dark {
+    --background: 0.14 0.018 250;
+    --foreground: 0.93 0.01 240;
+    --card: 0.18 0.02 250;
+    --card-foreground: 0.93 0.01 240;
+    --popover: 0.2 0.022 250;
+    --popover-foreground: 0.93 0.01 240;
+
+    --primary: 0.68 0.16 200;
+    --primary-foreground: 0.14 0.018 200;
+
+    --secondary: 0.22 0.025 250;
+    --secondary-foreground: 0.84 0.012 240;
+    --muted: 0.22 0.025 250;
+    --muted-foreground: 0.54 0.014 245;
+
+    --accent: 0.68 0.16 200;
+    --accent-foreground: 0.14 0.018 200;
+
+    --destructive: 0.62 0.2 22;
+    --destructive-foreground: 0.93 0.01 22;
+
+    --border: 0.28 0.022 250;
+    --input: 0.28 0.022 250;
+    --ring: 0.68 0.16 200;
+
+    --chart-1: 0.68 0.16 200;
+    --chart-2: 0.72 0.18 145;
+    --chart-3: 0.75 0.15 80;
+    --chart-4: 0.65 0.2 310;
+    --chart-5: 0.6 0.14 25;
+
+    --sidebar: 0.17 0.02 250;
+    --sidebar-foreground: 0.93 0.01 240;
+    --sidebar-primary: 0.68 0.16 200;
+    --sidebar-primary-foreground: 0.14 0.018 200;
+    --sidebar-accent: 0.22 0.025 250;
+    --sidebar-accent-foreground: 0.84 0.012 240;
+    --sidebar-border: 0.28 0.022 250;
+    --sidebar-ring: 0.68 0.16 200;
+
+    --success: 0.62 0.16 150;
+    --success-foreground: 0.14 0.018 150;
+    --warning: 0.75 0.15 80;
+    --warning-foreground: 0.14 0.018 80;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.kpi-card {
+  @apply bg-card border border-border rounded-lg p-6 shadow-card;
+}
+
+.badge-department {
+  @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-muted text-muted-foreground;
+}
+
+.stat-positive {
+  @apply text-[oklch(var(--success))];
+}
+
+.stat-negative {
+  @apply text-destructive;
+}

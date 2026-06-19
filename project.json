@@ -1,0 +1,26 @@
+{
+  "overview": "Employee Performance Dashboard for Frootle India Pvt. Ltd. with a new Lapses Trend Analysis tab providing organization-wide lapse analytics.",
+  "features": [
+    "Live Google Sheets data integration",
+    "Employee profiles with SWOT, PULSE, PRISM, Personality Analysis",
+    "Sales Trends with multi-year comparison and product performance",
+    "Feedback tab with Issue Insights and Region Analysis",
+    "Regional Analysis with drill-down dashboards",
+    "Suggestions & Issues with live sheet sync",
+    "Uploads with Excel templates and validation",
+    "Settings with UI customization",
+    "Password protection for sensitive actions",
+    "Export to Excel across all tabs",
+    "Lapses Trend Analysis with KPIs, trends, regional breakdown, and actionable insights"
+  ],
+  "category": "dashboard",
+  "tags": [
+    "employee-performance",
+    "analytics",
+    "google-sheets",
+    "lapses",
+    "attendance",
+    "management"
+  ],
+  "last_updated": "2026-06-18T10:30:18.689Z"
+}
